@@ -1,58 +1,124 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">StageConnect 🎓</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+StageConnect is a modern internship management platform designed to simplify the connection between students and companies.  
+The platform allows students to explore internship opportunities, apply online, and track their applications in real time, while companies can publish offers, manage applications, and find suitable candidates through an intuitive and user-friendly dashboard.
 </p>
 
-## About Laravel
+---
+<h1 align="center">🚀 Features 🎓</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 👨‍🎓 Stagiaire
+- Account registration & login
+- Browse internship offers
+- Apply to internships
+- Track application status
+- Personal dashboard
+- Profile management
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🏢 Entreprise
+- Company registration
+- Publish internship offers
+- Manage offers
+- View applications
+- Company dashboard
+- Profile management
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🔐 Authentication
+- Secure authentication system
+- Forgot password / reset password
+- Role-based access (stagiaire / entreprise)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h2 align="center">🛠️ Tech Stack</h2>
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<table align="center">
+    <tr>
+        <th>Layer</th>
+        <th>Technology</th>
+    </tr>
+    <tr>
+        <td>Backend</td>
+        <td>Laravel 13</td>
+    </tr>
+    <tr>
+        <td>Frontend</td>
+        <td>React + Inertia.js</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>MySQL</td>
+    </tr>
+    <tr>
+        <td>Styling</td>
+        <td>Tailwind CSS</td>
+    </tr>
+    <tr>
+        <td>Build Tool</td>
+        <td>Vite</td>
+    </tr>
+    <tr>
+        <td>Authentication</td>
+        <td>Laravel Breeze</td>
+    </tr>
+</table>
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+# <h2 align="center">📦 Packages & Libraries</h2>
+```bash
+@inertiajs/react
+react
+tailwindcss
+axios
+laravel/breeze
+```
+---
+<h2 align="center">📊 Dashboards</h2>
 
-## Agentic Development
+### 👨‍🎓 Stagiaire Dashboard
+- Applications statistics
+- Recent applications
+- Available internships
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 🏢 Entreprise Dashboard
+- Internship offers management
+- Applications overview
+- Company statistics
+---
+
+# <h2 align="center">⚙️ Installation</h2>
 
 ```bash
-composer require laravel/boost --dev
+# Clone the repository
+git clone https://github.com/mohamedechaara/stage-connect.git
 
-php artisan boost:install
+# Move into the project folder
+cd stage-connect
+
+# Install PHP dependencies
+composer install
+
+# Install Node.js dependencies
+npm install
+
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+
+# Configure database credentials inside .env file
+# DB_DATABASE=stage_connect
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+# Run database migrations
+php artisan migrate
+
+# Start Laravel development server
+php artisan serve
+
+# Start Vite development server
+npm run dev
 ```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+        
