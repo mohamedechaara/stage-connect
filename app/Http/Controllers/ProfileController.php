@@ -18,8 +18,14 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): Response
     {
+        $user = $request->user()->load('profile');
+        $profile = $user->profile;
+
         return Inertia::render('Profile/Edit', [
-            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
+            'user' => $user,
+            'avatarUrl' => $profile && $profile->avatar ? asset('storage/' . $profile->avatar) : null,
+            'cvUrl' => $profile && $profile->cv_path ? asset('storage/' . $profile->cv_path) : null,
+            'mustVerifyEmail' => $user instanceof MustVerifyEmail,
             'status' => session('status'),
         ]);
     }
@@ -29,15 +35,22 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $profile = $request->user()->profile()->firstOrCreate([]);
+        $data = $request->validated();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if ($request->hasFile('avatar')) {
+            $data['avatar'] = $request->file('avatar')
+                ->store('avatars', 'public');
         }
 
-        $request->user()->save();
+        if ($request->hasFile('cv_path')) {
+            $data['cv_path'] = $request->file('cv_path')
+                ->store('cvs', 'public');
+        }
 
-        return Redirect::route('profile.edit');
+        $profile->update($data);
+
+        return back()->with('success', 'Profil mis à jour avec succès !');
     }
 
     /**

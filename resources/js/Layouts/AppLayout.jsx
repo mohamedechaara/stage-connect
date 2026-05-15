@@ -58,10 +58,18 @@ export default function AppLayout({ children }) {
                             <button
                                 onClick={() => setMenuOpen(!menuOpen)}
                                 className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <span className="text-blue-600 font-semibold text-sm">
-                                        {user?.name?.charAt(0).toUpperCase()}
-                                    </span>
+                                <div className="w-8 h-8 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                                    {user?.profile?.avatar ? (
+                                        <img
+                                            src={`/storage/${user.profile.avatar}`}
+                                            alt="Avatar"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <span className="text-blue-600 font-semibold text-sm">
+                                            {user?.name?.charAt(0).toUpperCase()}
+                                        </span>
+                                    )}
                                 </div>
                                 <span className="hidden md:block text-sm font-medium text-gray-700">{user?.name}</span>
                                 <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

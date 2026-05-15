@@ -31,6 +31,17 @@ class ApplicationController extends Controller
             return back()->withErrors(['message' => 'هذا العرض لم يعد متاحاً']);
         }
 
+        if ($internship->applications()->where('user_id', Auth::id())->exists()) {
+            return back()->withErrors(['message' => 'Vous avez déjà postulé à cette offre.']);
+        }
+
+        if ($request->hasFile('cv')) {
+            $profile = $request->user()->profile()->firstOrCreate([]);
+            $profile->update([
+                'cv_path' => $request->file('cv')->store('cvs', 'public'),
+            ]);
+        }
+
         Application::create([
             'user_id'       => Auth::id(),
             'internship_id' => $request->internship_id,
