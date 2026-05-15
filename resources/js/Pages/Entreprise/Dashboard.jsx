@@ -19,7 +19,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                             </div>
 
                             <h1 className="text-xl font-bold text-gray-900">
-                                StagePlatform
+                                Stage Connect
                             </h1>
                         </div>
 

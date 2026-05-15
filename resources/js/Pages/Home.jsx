@@ -88,7 +88,7 @@ export default function Home({ stats }) {
                         </h2>
 
                         <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
-                            StageConnect helps students discover internship opportunities
+                            Stage Connect helps students discover internship opportunities
                             and allows companies to find talented candidates through
                             a modern, fast, and intuitive platform.
                         </p>

@@ -20,7 +20,7 @@ export default function AppLayout({ children }) {
                             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <span className="text-white font-bold text-sm">S</span>
                             </div>
-                            <span className="font-bold text-gray-900 text-lg">StagePlatform</span>
+                            <span className="font-bold text-gray-900 text-lg">Stage Connect</span>
                         </Link>
 
                         {/* Nav Links */}

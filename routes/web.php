@@ -10,7 +10,6 @@ use App\Models\User;
 require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-
     return Inertia::render('Home', [
         'stats' => [
             'stagiaires' => User::where('role', 'stagiaire')->count(),
