@@ -33,14 +33,14 @@ export default function Dashboard({ stats, recentOffers, company }) {
                             </Link>
 
                             <Link
-                                href="/entreprise/offers"
+                                href="/mes-offres"
                                 className="text-gray-600 hover:text-gray-900"
                             >
                                 Mes offres
                             </Link>
 
                             <Link
-                                href="/entreprise/applications"
+                                href="/mes-offres"
                                 className="text-gray-600 hover:text-gray-900"
                             >
                                 Candidatures
@@ -57,7 +57,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                     </div>
 
                     <Link
-                        href="/entreprise/offers/create"
+                        href="/offres/creer"
                         className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition"
                     >
                         + Publier une offre
@@ -113,7 +113,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 
                     <QuickAction
-                        href="/entreprise/offers/create"
+                        href="/offres/creer"
                         title="Ajouter une offre"
                         desc="Publiez une nouvelle offre de stage"
                         emoji="➕"
@@ -127,7 +127,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                     />
 
                     <QuickAction
-                        href="/entreprise/applications"
+                        href="/mes-offres"
                         title="Voir candidatures"
                         desc="Consultez les candidatures reçues"
                         emoji="📄"
@@ -147,7 +147,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                             </h3>
 
                             <Link
-                                href="/entreprise/offers"
+                                href="/mes-offres"
                                 className="text-indigo-600 text-sm font-medium"
                             >
                                 Voir tout →
@@ -184,7 +184,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                                             </span>
 
                                             <Link
-                                                href={`/entreprise/offers/${offer.id}/edit`}
+                                                href={`/offres/${offer.id}/edit`}
                                                 className="text-sm text-indigo-600 hover:text-indigo-700"
                                             >
                                                 Modifier
@@ -210,7 +210,7 @@ export default function Dashboard({ stats, recentOffers, company }) {
                                     </p>
 
                                     <Link
-                                        href="/entreprise/offers/create"
+                                        href="/offres/creer"
                                         className="inline-flex bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium"
                                     >
                                         Ajouter une offre

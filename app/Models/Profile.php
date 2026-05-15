@@ -10,6 +10,14 @@ class Profile extends Model
         'city',
         'phone',
         'sector',
+        'bio',
+        'avatar',
+        'location',
+        'cv_path',
+        'specialty',
+        'graduation_year',
+        'company_name',
+        'website',
     ];
 
     public function user()

@@ -101,7 +101,7 @@ function OfferCard({ offer }) {
                 📍 {offer.location} · ⏱ {offer.duration_months} mois
             </p>
             <p className="text-xs text-gray-500 line-clamp-2 mb-4">{offer.description}</p>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
                 <span className="text-xs text-gray-400">
                     Deadline: {new Date(offer.deadline).toLocaleDateString('fr-FR')}
                 </span>
