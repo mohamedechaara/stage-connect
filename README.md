@@ -115,6 +115,9 @@ php artisan key:generate
 # Run database migrations
 php artisan migrate
 
+# Run seeders migrations
+php artisan db:seed
+
 # Start Laravel development server
 php artisan serve
 
