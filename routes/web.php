@@ -4,12 +4,19 @@ use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use Inertia\Inertia;
+use App\Models\User;
 // Auth routes (Breeze)
 require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-    return redirect()->route('login');
+
+    return Inertia::render('Home', [
+        'stats' => [
+            'stagiaires' => User::where('role', 'stagiaire')->count(),
+            'entreprises' => User::where('role', 'entreprise')->count(),
+        ]
+    ]);
 });
 Route::middleware('auth')->group(function () {
 
